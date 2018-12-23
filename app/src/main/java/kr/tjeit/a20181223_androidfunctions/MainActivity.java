@@ -82,7 +82,11 @@ public class MainActivity extends BaseActivity {
                 DatePickerDialog.OnDateSetListener odsl = new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                        Toast.makeText(mContext, "날짜 선택", Toast.LENGTH_SHORT).show();
+
+                        String selectedDate = String.format("%d년 %d월 %d일", year, month+1, dayOfMonth);
+                        dateTxt.setText(selectedDate);
+
+
                     }
                 };
 
